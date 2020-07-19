@@ -57,18 +57,17 @@ echo [001] Sourcery CodeBench Lite distribution
 if ! [ -f "dist/arm-2012.03-42-arm-none-symbianelf.src.tar.bz2" ]; then
 	echo Downloading Sourcery CodeBench Lite
 	wget -P dist https://sourcery.mentor.com/GNUToolchain/package10152/public/arm-none-symbianelf/arm-2012.03-42-arm-none-symbianelf.src.tar.bz2
-	exit_if_fail .
 fi
 
 if ! [ -d "dist/arm-2012.03-42-arm-none-symbianelf" ]; then
 	echo Extracting Sourcery CodeBench Lite
-	tar -C dist -xvzf dist/arm-2012.03-42-arm-none-symbianelf.src.tar.bz2
+	tar -C dist -xvf dist/arm-2012.03-42-arm-none-symbianelf.src.tar.bz2
 fi
 
 echo [002] Parma Polyhedra Library
 if ! [ -d "dist/ppl-0.11" ]; then
 	echo Extracting Parma Polyhedra Library
-	tar -C dist -xvzf dist/arm-2012.03-42-arm-none-symbianelf/ppl-2012.03-42.tar.bz2
+	tar -C dist -xf dist/arm-2012.03-42-arm-none-symbianelf/ppl-2012.03-42.tar.bz2
 fi
 
 if ! [ -f "build/ppl-0.11.cache" ]; then
@@ -79,7 +78,7 @@ fi
 echo [003] binutils
 if ! [ -d "dist/binutils-2012.03" ]; then
 	echo Extracting binutils
-	tar -C dist -xvzf dist/arm-2012.03-42-arm-none-symbianelf/binutils-2012.03-42.tar.bz2
+	tar -C dist -xf dist/arm-2012.03-42-arm-none-symbianelf/binutils-2012.03-42.tar.bz2
 fi
 
 if ! [ -f "build/binutils-2012.03.cache" ]; then
@@ -90,7 +89,7 @@ fi
 echo [004] GCC
 if ! [ -d "dist/gcc-4.6-2012.03" ]; then
 	echo Extracting gcc
-	tar -C dist -xvzf dist/arm-2012.03-42-arm-none-symbianelf/gcc-2012.03-42.tar.bz2
+	tar -C dist -xf dist/arm-2012.03-42-arm-none-symbianelf/gcc-2012.03-42.tar.bz2
 fi
 
 if ! [ -f "build/gcc-4.6-2012.03.cache" ]; then
